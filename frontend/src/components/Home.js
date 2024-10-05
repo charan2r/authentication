@@ -1,16 +1,35 @@
 import React from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
+//import nightsky from '../images/night-sky.json';
+import space from '../images/space.json';
+import Lottie from 'lottie-react';
+//import { useEffect, useState } from 'react';
 
 const Home = () => {
     return (
-        <div className="home-container">
-            <div className="welcome-card">
-                <h2>Welcome to the Home Page!</h2>
-                <p>This is where you can find your dashboard and other content.</p>
-                <button className="explore-button">Explore More</button>
+        <div>
+            <div className="home-container">
+                <div className="content-container">
+                    <Navbar className="navbar" />
+                    <h1 className="title">Welcome</h1>
+                    <p className="description">
+                        Discover the wonders of the night sky and explore the universe with us.
+                    </p>
+                    <a href="#explore" className="explore-button">
+                        Explore Now
+                    </a>
+                </div>
+
+                <div className="lottie-container">
+                   <Lottie animationData={space} loop={true} />
+               </div>
+
+               
             </div>
+            <Footer />
         </div>
     );
 };
 
 export default Home;
-

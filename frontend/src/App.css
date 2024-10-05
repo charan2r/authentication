@@ -50,7 +50,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 /* Container for forms */
@@ -124,11 +124,12 @@ h1 {
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(135deg, #e8f0fe, #d0e1fe); 
   text-align: center; 
   padding: 2rem; 
+  margin-top: 90px;
 }
 
 .home-container h2 {
@@ -144,22 +145,162 @@ h1 {
   line-height: 1.6; 
 }
 
-/* Explore button styles */
-.explore-button {
-  padding: 12px 25px;
-  background-color: #007bff; 
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(116, 68, 163);
+  transition: background-color 0.3s ease, padding 0.3s ease; 
+  z-index: 100;
+  box-sizing: border-box; 
 }
 
-.explore-button:hover {
-  background-color: #0056b3; 
-  transform: scale(1.05); 
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85); 
+  padding: 10px; 
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  color: #ffcc00; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 5px;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+}
+
+
+/* Explore Button Styling */
+a[href="#explore"] {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ffdd57;
+  color: #1c1c2d;
+  font-weight: bold;
+  border-radius: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 auto;
+  display: block;
+  max-width: 200px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+a[href="#explore"]:hover {
+  background-color: #ffd700; 
+  color: #24244e;
+  transition: 0.3s;
+}
+
+.lottie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px; 
+  width: 50%;
+  max-width: 100px;
+}
+
+.lottie-container > div {
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+
+  .lottie-container .lottie-animation {
+    max-width: 300px;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #1a1a1a; 
+  color: #f5f5f5; 
+  padding: 20px 0; 
+  text-align: center; 
+  position: relative; 
+  left: 0; 
+  width: 100%; 
+  margin-top: 100px;
+}
+
+.footer-links {
+  margin-top: 10px; 
+}
+
+.footer-links a {
+  color: #f5f5f5; 
+  text-decoration: none; 
+  margin: 0 10px; 
+}
+
+.footer-links a:hover {
+  text-decoration: underline; 
 }
 
 

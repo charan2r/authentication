@@ -8,7 +8,7 @@ import './App.css';
 const App = () => {
     return (
       <>
-      <div className='App'>
+      <div>
         <Router>
             <Routes>
                 <Route path="/" element={<Login />} />
